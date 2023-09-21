@@ -4,7 +4,7 @@ current_day = datetime.now()
 today = current_day.weekday()
 
 #Used for testing different days
-today = 1
+#today = 1
 
 discount_rate = 0.10
 sales_tax = 0.06
@@ -51,5 +51,4 @@ while True:
         print(f"You would save {total_save:.2f}")
 
     if number == 0:
-        break  # Exit the loop if 0 is entered 
-
+        break  # Exit the loop if 0 is entered
