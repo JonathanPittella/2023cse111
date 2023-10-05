@@ -56,5 +56,6 @@ def main():
     storage_efficiency_picnic = compute_storage_efficiency(radis_tall, height_tall)
     print(f"{name} {storage_efficiency_picnic:.2f}")
 
+
 if __name__ == "__main__":
     main()

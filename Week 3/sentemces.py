@@ -34,12 +34,40 @@ while True:
             # Randomly choose and return a determiner.
             word = random.choice(words)
             return word.capitalize()
+        
+        def make_preposition(quantity):
+            if quantity == "single": 
+                words = ["on", "under", "in", "beside", "between", "above", "below", "behind", "among", "with"]
+            else:
+                words = ["besides", "among", "across", "around", "along", "throughout", "between", "underneath", "among", "amidst",]
 
+            word = random.choice(words)
+            return word.lower()
+        
+        def make_subjects(quantity):
+            if quantity == "single":
+                words = ["bus", "lady", "shower", "floor"]
+            else:
+                words = ["dogs", "books", "students", "contries"]
+
+            word = random.choice(words)
+            return word.lower()
+        
+        def get_adjectives(quantity):
+            if quantity == "single" or "plura":
+                words = ["beautifull", "intelligent", "friendly", "cold", "colorful"]
+
+            word = random.choice(words)
+            return word.lower()
+        
         def make_sentence(quantity, tense):
+            adjectives = get_adjectives(quantity)
+            subjects = make_subjects(quantity)
+            preposition = make_preposition(quantity)
             determiner = get_determiner(quantity)
             noun = get_noun(quantity)
             verb = get_verb(quantity, tense)
-            sentence = f"{determiner} {noun} {verb}."
+            sentence = f"{determiner} {adjectives} {noun} {verb} {preposition} the {subjects}."
             return sentence
 
         def generate_sentences(num_questions):
