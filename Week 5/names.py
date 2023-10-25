@@ -32,6 +32,7 @@ def extract_family_name(full_name):
     return family_name
 
 
+
 def extract_given_name(full_name):
     """Extract and return the given name from a string in this form:
     "family_name; given_name". For example, if this function were
@@ -47,4 +48,5 @@ def extract_given_name(full_name):
 
     # Extract a substring from the full name and return it.
     given_name = full_name[semicolon_index + 2:]
+    print(given_name)
     return given_name
