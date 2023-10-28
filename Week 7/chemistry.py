@@ -114,11 +114,9 @@ def main():
     periodic_table_list = make_periodic_table()
 
     for element in periodic_table_list:
-        symbol = element[0]
         name = element[1]  
         act_mass = element[2]
         print(f"{name}: {act_mass}")
 
 if __name__ == "__main__":
     main()
-    
