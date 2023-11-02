@@ -89,50 +89,51 @@ def main():
     # human readable data about the marriages.
     print_marriages(marriages_dict, people_dict)
 
+def calculate_age(birth_year, death_year, wedding_year=None):
+    if wedding_year:
+        return wedding_year - birth_year
+    elif death_year:
+        return death_year - birth_year
+    else:
+        return None
 
 def print_death_age(people_dict):
-    """For each person in the people dictionary,
-    print the person's name and age at death.
-
-    Parameter
-        people_dict: a dictionary that contains data about people
-            Each item in the dictionary is in this format:
-            person_key: [name, gender, birth_year, death_year]
-    Return: nothing
-    """
-    pass
+    for person_key, person_data in people_dict.items():
+        name = person_data[NAME_INDEX]
+        birth_year = person_data[BIRTH_YEAR_INDEX]
+        death_year = person_data[DEATH_YEAR_INDEX]
+        age_at_death = calculate_age(birth_year, death_year)
+        print(f"{name} died at the age of {age_at_death}.")
 
 
 def count_genders(people_dict):
-    """Count and print the number of males
-    and females in the people dictionary.
-
-    Parameter
-        people_dict: a dictionary that contains data about people
-            Each item in the dictionary is in this format:
-            person_key: [name, gender, birth_year, death_year]
-    Return: nothing
-    """
-    pass
-
+    male_count = 0
+    female_count = 0
+    for person_data in people_dict.values():
+        gender = person_data[GENDER_INDEX]
+        if gender == "M":
+            male_count += 1
+        elif gender == "F":
+            female_count += 1
+    print(f"Number of males: {male_count}")
+    print(f"Number of females: {female_count}")
 
 def print_marriages(marriages_dict, people_dict):
-    """For each marriage in the marriages dictionary, print
-    the husband's name, his age at wedding, the wedding year,
-    the wife's name, and her age at wedding.
+    for marriage_key, marriage_data in marriages_dict.items():
+        husband_key = marriage_data[HUSBAND_KEY_INDEX]
+        wife_key = marriage_data[WIFE_KEY_INDEX]
+        wedding_year = marriage_data[WEDDING_YEAR_INDEX]
 
-    Parameters
-        marriages_dict: a dictionary that contains data about
-            marriages. Each item in the dictionary is in this format:
-            marriage_key: [husband_key, wife_key, wedding_year]
-        people_dict: a dictionary that contains data about people
-            Each item in the dictionary is in this format:
-            person_key: [name, gender, birth_year, death_year]
-    Return: nothing
-    """
-    pass
+        husband_name = people_dict[husband_key][NAME_INDEX]
+        husband_birth_year = people_dict[husband_key][BIRTH_YEAR_INDEX]
+        husband_age_at_wedding = calculate_age(husband_birth_year, None, wedding_year)
 
+        wife_name = people_dict[wife_key][NAME_INDEX]
+        wife_birth_year = people_dict[wife_key][BIRTH_YEAR_INDEX]
+        wife_age_at_wedding = calculate_age(wife_birth_year, None, wedding_year)
 
+        print(f"{husband_name} was {husband_age_at_wedding} years old when he married {wife_name}, who was {wife_age_at_wedding} years old, in {wedding_year}.")
+        print()
 # If this file was executed like this:
 # > python teach_solution.py
 # then call the main function. However, if this file
