@@ -1,6 +1,6 @@
 # Copyright 2020, Brigham Young University-Idaho. All rights reserved.
 
-from students import read_dictionary
+from read_dictionary import read_dictionary
 from inspect import signature
 from os import path
 from tempfile import mktemp
