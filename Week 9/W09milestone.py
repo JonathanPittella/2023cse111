@@ -4,7 +4,7 @@ def read_dictionary(filename, key_column_index):
     data = {}
     with open(filename, 'r', newline='') as csvfile:
         reader = csv.reader(csvfile)
-        header = next(reader)
+        next(reader)
         for row in reader:
             key = row[key_column_index]
             data[key] = row
