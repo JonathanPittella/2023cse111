@@ -1,0 +1,3 @@
+Customer Name,Items,Subtotal,Sales Tax,Total
+Jonathan,"{'Apple': 5, 'Bread': 10, 'Orange': 6, 'Milk': 2, 'Banana': 1, 'Cheese': 1}",48.45,3.8760000000000003,52.326
+Jonathan,"{'Apple': 5, 'Bread': 10, 'Banana': 2, 'Cheese': 1}",34.75,2.7800000000000002,37.53
