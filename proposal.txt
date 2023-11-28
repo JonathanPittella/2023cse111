@@ -1,4 +1,4 @@
-CSE 111 Proposal for a Student Chosen Program
+﻿CSE 111 Proposal for a Student Chosen Program
 
     (This is a proposal. All proposals are written with our best
     knowledge at the beginning of a project. As we progress from the
@@ -9,16 +9,20 @@ CSE 111 Proposal for a Student Chosen Program
     answer each of the following questions to the best of your
     knowledge.)
 
-1. What is the title of your program?
+1. What is the title of your program? Python Reorganizer(pythonreorganizer.py)
 
 2. What real-world problem will your program address or help to solve?
+I’ll be working on a program that accesses a .csv file full of data from a company, organizes the data, and prints its data for proper analysis according to the user's will.
 
 3. What will you learn from developing this program?
+I hope I'll learn how to print the data according to the needs of a company. I've worked previously in similar programs, but I never learned how to print the data with a 'good looking appearance', making it easier to analyze the data.
 
 4. What Python modules will your program use?
 
     (Some examples are: csv, datetime, functools, matplotlib, math,
     pandas, pytest, random, requests, and tkinter.)
+
+I’ll use csv files, Pandas library and matplotlib.  
 
 5. Will you separate your Python program into functions that each
 perform a single task?
@@ -34,6 +38,10 @@ perform a single task?
     a result. Therefore, you should write most of your program functions
     to have parameters and return a result.)
 
+Sure, I’ll do it! My plan is to separate the code in ‘main’, ‘float_edit’ and ‘execute’.
+
+
 6. Will you write test functions to test at least two of your program
 functions?
 
+I will write at least two functions for the first part of the code, but I’ll try to test the planed three functions of the code.
