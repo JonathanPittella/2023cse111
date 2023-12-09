@@ -62,7 +62,7 @@ def populate_main_window(frm_main):
     for i, (category, count) in enumerate(categories_count.items(), start=1):
         result_text.insert(tk.END, f"{i}. {category}: {count} products\n")
 
-    def show_products():
+    def show_products(event=None):  # Modify the function signature
         try:
             selected_category_number = ent_age.get()
             if 1 <= selected_category_number <= len(categories_count):
@@ -75,22 +75,25 @@ def populate_main_window(frm_main):
             else:
                 result_text.delete("1.0", tk.END)  # Clear previous content
                 result_text.insert(tk.END, f"Invalid category number: {selected_category_number}\n")
-
         except ValueError:
             lbl_fast.config(text="")
 
+    # Rest of your code...
+
+    # Bind the show_products function to the KeyRelease event of ent_age
+    ent_age.bind("<KeyRelease>", show_products)
+
+
     def clear():
-        btn_clear.focus()
         ent_age.clear()
         lbl_slow.config(text="")
         lbl_fast.config(text="")
+        # Repopulate the original list of categories
         result_text.delete("1.0", tk.END)  # Clear previous content
+        for i, (category, count) in enumerate(categories_count.items(), start=1):
+            result_text.insert(tk.END, f"{i}. {category}: {count} products\n")
         ent_age.focus()
 
-    ent_age.bind("<KeyRelease>", show_products)  # Bind to show_products function
-    btn_clear.config(command=clear)
-    btn_show_products.config(command=show_products)
-    ent_age.focus()
 
 def analyze_csv(csv_file_path):
     with open(csv_file_path, 'r') as file:
