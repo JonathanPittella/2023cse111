@@ -41,7 +41,6 @@ def populate_main_window(frm_main):
     lbl_fast = Label(frm_main, width=3)
     lbl_rate_units = Label(frm_main, text="")
     btn_clear = Button(frm_main, text="Clear")
-    btn_show_products = Button(frm_main, text="Show Products")
 
     result_text = Text(frm_main, height=10, width=40)
     result_text_scrollbar = Scrollbar(frm_main, command=result_text.yview)
@@ -55,7 +54,6 @@ def populate_main_window(frm_main):
     lbl_fast.grid(row=2, column=2, padx=3, pady=3)
     lbl_rate_units.grid(row=2, column=3, padx=0, pady=3)
     btn_clear.grid(row=3, column=0, padx=3, pady=3, columnspan=2, sticky="w")
-    btn_show_products.grid(row=3, column=2, padx=3, pady=3, columnspan=2, sticky="e")
     result_text.grid(row=4, column=0, columnspan=4, padx=3, pady=3, sticky="nsew")
     result_text_scrollbar.grid(row=4, column=4, pady=3, sticky="ns")
 
