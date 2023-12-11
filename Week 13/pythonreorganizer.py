@@ -97,7 +97,6 @@ def analyze_csv(csv_file_path):
         next(csv_reader)
         first_word_column_index = 0
         categories_count = Counter(row[first_word_column_index].split()[0] for row in csv_reader)
-
     return categories_count
 
 def get_products_for_category(csv_file_path, category):
