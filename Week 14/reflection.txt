@@ -1,0 +1,21 @@
+Please respond thoroughly (at least two sentences for each question) to
+the following three questions.
+
+1. Describe an experience you had this semester where you saw the power of
+functions.
+1. Describe an experience you had this semester where you saw the power of functions.
+When I first delved into the realms of debugging and testing, I recognized their importance, but it took time to truly grasp their significance. In the development process of a program, various steps must be followed, including structural ones and others that adhere to conventional and best practices.
+When functions are well-organized and appropriately called, the likelihood of future errors is diminished. Placing functions strategically at the beginning of the program, which can be called at the end of the code, contributes to a well-organized structure. This is crucial for identifying and rectifying potential errors more efficiently, in my opinion.
+
+
+2. In your judgment, what is the value of test functions?
+Well, as i mentioned last question, something that made me feel amazed about this semester is indeed testing functions. 
+When I first started learning about testing and when I was debugging some program, the most occasional situation was that error occurred because of the errors I committed by calling a function incorrectly, and the way I found to fix those errors were mostly related to debugging and testing.
+
+
+3. Describe your process for troubleshooting and fixing a program that
+has a problem. What is one thing you can do to improve your process?
+
+When I encounter a problem or error, I refer to the preparation materials I have collected. Upon finding valuable content, I explore previous weeks' programs to determine effective ways to apply these insights to address the current issue. Subsequently, I execute the debugging process to analyze the code.
+In instances where I am uncertain about applying a solution or cannot find the necessary information to rectify errors, I turn to the internet. W3Schools stands out as an excellent resource, offering a plethora of tools and tutorials covering elements from various programming languages.
+I am aware that I may not always have access to BYU's materials in the future, especially as I transition into professional work. Consequently, I am actively seeking alternative websites that provide quality instruction on programming and AI to enhance my understanding and refine the structures I am working on. This is my ongoing effort to improve my learning process and search for answers. While there are still many tools I have yet to discover, I am optimistic that I will find the resources needed to expedite the error-fixing process.
